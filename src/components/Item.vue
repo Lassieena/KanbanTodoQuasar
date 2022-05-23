@@ -1,0 +1,42 @@
+<template>
+  <q-card
+    color="white"
+    text-color="dark"
+    class="q-mb-md"
+  >
+    <q-card-title>#{{item.id}}</q-card-title>
+    <q-card-main>
+      <span class="ellipsis-3-lines">{{item.text}}</span>
+    </q-card-main>
+    <q-card-actions align="end">
+      <q-btn icon="delete" flat round dense color="light" @click="removeItem(item)" />
+    </q-card-actions>
+  </q-card>
+</template>
+
+<script>
+
+
+export default {
+  name: 'IndexPage',
+  props: [ 'item' ],
+    methods: {
+    removeItem (item) {
+      this.$q.dialog({
+        title: '削除',
+        message: `このタスクを削除しますか #${item.id}?`,
+        ok: 'はい',
+        cancel: 'いいえ',
+        color: 'secondary'
+      }).onOk(() => {
+        console.log('削除')
+        this.$store.commit('app/removeItem', item)
+      })
+    }
+    }
+}
+</script>
+
+<style>
+
+</style>
