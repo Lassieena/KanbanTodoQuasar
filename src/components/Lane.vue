@@ -22,10 +22,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Draggable from 'vuedraggable'
 import Item from 'components/Item.vue'
 
-export default {
+export default defineComponent({
   name: 'IndexPage',
   props: [ 'items', 'title', 'id' ],
   components: { Draggable, Item },
@@ -39,7 +40,7 @@ export default {
       }
     }
   }
-}
+})
 </script>
 
 <style>

@@ -39,7 +39,7 @@ export default defineComponent({
     removeItem (item) {
       this.$q.dialog({
         title: '削除',
-        message: `このタスクを削除しますか #${item.id}?`,
+        message: `#${item.id}このタスクを削除しますか?`,
         ok: 'はい',
         cancel: 'いいえ',
         color: 'secondary'

@@ -2,13 +2,14 @@
   <q-page padding>
     <div class="row">
       <div class="col">
-        <lane :items="todoItems" title="To-Do" id="todo" />
+        <lane :items="todoItems" title="To-Do" id="todo" />あ
+        
       </div>
       <div class="col">
-        <lane :items="inProgressItems" title="In Progress" id="inProgress" />
+        <lane :items="inProgressItems" title="In Progress" id="inProgress" />あ
       </div>
       <div class="col">
-        <lane :items="doneItems" title="Done" id="done" />
+        <lane :items="doneItems" title="Done" id="done" />あ
       </div>
     </div>
   </q-page>
@@ -21,7 +22,7 @@ import Lane from 'components/Lane.vue'
 
 export default defineComponent({
   name: 'IndexPage',
-    components: { Lane },
+    // components: { Lane },
     computed: mapState({
       todoItems: s => s.app.items.todo,
       inProgressItems: s => s.app.items.inProgress,

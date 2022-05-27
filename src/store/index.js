@@ -2,7 +2,7 @@ import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 
 import app from './app'
-import localStoragePlugin from 'plugins/localStorage'
+import localStoragePlugin from '../plugins/localStorage'
 // import example from './module-example'
 
 /*
